@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student task manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <span class="logo">🎯</span>
+        <span class="theme">Plan it. Do it. Crack it</span>
+        <span class="date"><time datetime="2026-09-08">September 8, 2026</time></span>
+        <span class="toggle"><button class="toggleButton">🌗</button></span>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="tasks">
+                <h4 class="dash1">Total tasks</h4>
+                <span class="num1">0</span>
+            </div>
+            <div class="completed">
+                <h4 class="dash2">Completed</h4>
+                <span class="num2">0</span>
+            </div>
+            <div class="pending">
+                <h4 class="dash3">Pending</h4>
+                <span class="num3">0</span>
+            </div>
+            <div class="progress">
+                <h4 class="dash4">Progress</h4>
+                <span class="num4">0%</span>
+            </div>
+        </section>
+
+        <section class="footer">
+            <h3>Your progress</h3>
+            <progress max="100" value="0" class="progress-bar"></progress>
+        </section>
+
+        <section class="addTaskSection">
+            <form>
+                <div class="txt">
+                    <input type="text" placeholder="Task Name" class="form-input">
+                </div>
+                <div class="dropdown1">
+                    <select name="subject" id="sub" class="form-input">
+                        <option value="" disabled selected hidden>subject</option>
+                        <option value="data structures">data structures</option>
+                        <option value="computer networks">computer networks</option>
+                        <option value="DBMS">DBMS</option>
+                        <option value="operating system">operating system</option>
+                        <option value="python">python</option>
+                        <option value="java">java</option>
+                    </select>
+                </div>
+                <div class="dropdown2">
+                    <select name="priority" id="priority" class="form-input">
+                        <option value="" disabled selected hidden>priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="date">
+                    <input type="date" class="form-input">
+                </div>
+                <div class="submit">
+                    <button type="button" class="addTaskBtn">+ Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="controls">
+            <form class="controls_form">
+                <div class="search">
+                    <input type="search" placeholder="Search Task (Enter full name of the task)" class="search_input">
+                </div>
+                <div class="filter">
+                    <select name="filter" class="filterList">
+                        <option value="" disabled selected hidden>Filter</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="clear">
+                    <button class="control_btn" type="button">Clear</button>
+                </div>
+                <div class="clearAll">
+                    <button class="control_btn" type="button">Clear All</button>
+                </div>
+                <div class="find">
+                    <button class="control_btn" type="button">Search</button>
+                </div>
+                <div class="filterBtn">
+                    <button class="control_btn" type="button">Filter</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-list">
+            <h2>Your Tasks</h2>
+
+            <div class="tableWrapper">
+                <table class="taskTable">
+                    <thead>
+                        <tr>
+                            <th class="col-done">Done</th>
+                            <th class="col-task">Task</th>
+                            <th class="col-subject">Subject</th>
+                            <th class="col-priority">Priority</th>
+                            <th class="col-date">Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="taskBody"></tbody>
+                </table>
+            </div>
+
+            <div class="emptyState">
+                <p>No tasks yet</p>
+                <p>Add your first task to get started 🚀</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
