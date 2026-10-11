@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f5fc;
+}
+
+#signup-page {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+#navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 50px;
+  background-color:  #f4f0fa;
+  border-bottom: 1px solid #e5dff0;
+}
+
+#navbar img {
+  width: 45px;
+  height: 45px;
+}
+
+#navbar h2 {
+  font-size: 26px;
+  color: #6c4ab6;
+}
+
+#navbar p {
+  margin: 0 300px;
+  color: #6c4ab6;
+  font-weight: 600;
+}
+
+#signup-card {
+  width: 500px;
+  margin: 50px auto;
+  padding: 35px 40px;
+  background-color: white;
+  border-radius: 18px;
+  border: 1px solid #e5dff0;
+  box-shadow: 0 8px 25px rgba(59, 42, 92, 0.08);
+}
+
+#card-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#card-head h1 {
+  color: #3b2a5c;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+#card-head p {
+  color: #777;
+  font-size: 14px;
+}
+
+#card-name,
+#card-email,
+#card-password,
+#card-confirm-password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#signup-card label {
+  color: #3b2a5c;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+#signup-card input {
+  padding: 12px;
+  border: 1px solid #d8d1e5;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+#signup-card input:focus {
+  border-color: #6c4ab6;
+}
+
+#show-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+#show-password input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+#card-button button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c4ab6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#card-button button:hover {
+  background-color: #57369c;
+}
+
+#acc-exists {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#acc-exists p {
+  display: inline;
+  color: #777;
+}
+
+#log-in a {
+  margin-left: 5px;
+  color: #6c4ab6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#log-in a:hover {   
+  text-decoration: underline;
+}
+
+#error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 10px 0;
+  text-align: left;
+}
+
+#password-error, #name-error, #email-error{
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
